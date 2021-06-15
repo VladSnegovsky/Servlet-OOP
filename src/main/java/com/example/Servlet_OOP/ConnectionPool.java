@@ -9,6 +9,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class ConnectionPool {
     private static final ConnectionPool cp = new ConnectionPool();
 
+//    private final String url = "postgres://sqfpvhxr:QdnoEPWrtXw5fXIX4KxP7xrL0Z01msFZ@tai.db.elephantsql.com/sqfpvhxr";
     private final String url = "jdbc:mysql://localhost:3310/test";
     private final String user = "root";
     private final String password = "bryb6r";

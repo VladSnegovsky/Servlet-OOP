@@ -34,7 +34,7 @@ public class CheckStatus extends HttpServlet {
             statement.setString(1, String.valueOf(id));
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()){
-                if (resultSet.getInt(8) == 1)
+                if (resultSet.getInt(2) == 1)
                     calculated = true;
             }
             statement.close();

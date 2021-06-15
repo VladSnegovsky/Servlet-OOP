@@ -147,6 +147,8 @@
             }
         }
 
+        price = "20";
+
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
 
         try (Connection connection = connectionPool.getConnection();){
@@ -155,7 +157,7 @@
             statement.setString(1, String.valueOf(id));
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()){
-                price = String.valueOf(resultSet.getInt(7));
+                price = String.valueOf(resultSet.getInt(8));
             }
             statement.close();
             connectionPool.releaseConnection(connection);
